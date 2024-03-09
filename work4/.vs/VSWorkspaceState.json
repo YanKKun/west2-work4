@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\work",
+    "\\work\\src",
+    "\\work\\src\\main",
+    "\\work\\src\\main\\java",
+    "\\work\\src\\main\\java\\com",
+    "\\work\\src\\main\\java\\com\\yk",
+    "\\work\\src\\main\\java\\com\\yk\\config",
+    "\\work\\src\\main\\java\\com\\yk\\service",
+    "\\work\\src\\main\\java\\com\\yk\\service\\impl"
+  ],
+  "SelectedNode": "\\work\\src\\main\\java\\com\\yk\\service\\impl\\VideoServiceImpl.java",
+  "PreviewInSolutionExplorer": false
+}

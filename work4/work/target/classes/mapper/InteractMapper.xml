@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yk.mapper.InteractMapper">
+
+
+    <select id="listVideoByUserLike" resultType="com.yk.pojo.Video">
+        select id,
+               video.user_id,
+               video_url,
+               cover_url,
+               title,
+               description,
+               create_time,
+               update_time,
+               deleted_time,
+               visit_count,
+               like_count,
+               comment_count
+        from video,
+             `like`
+        where `like`.user_id = #{user_id}
+          and video_id = video.id
+        limit #{pageNum},#{pageSize}
+    </select>
+    <select id="listAllVideoByUserLike" resultType="com.yk.pojo.Video">
+        select id,
+               video.user_id,
+               video_url,
+               cover_url,
+               title,
+               description,
+               create_time,
+               update_time,
+               deleted_time,
+               visit_count,
+               like_count,
+               comment_count
+        from video,
+             `like`
+        where `like`.user_id = #{user_id}
+          and video_id = video.id
+    </select>
+
+</mapper>

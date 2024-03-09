@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/work4?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      username: root
+      password: 120808
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: assign_id #将id生成全局为雪花算法
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #驼峰命名的转换

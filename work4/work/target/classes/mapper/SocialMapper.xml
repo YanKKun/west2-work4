@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yk.mapper.SocialMapper">
+    <select id="listFollows" resultType="com.yk.dto.UserDTO">
+        select id, nickname, avatar_url
+        from user,
+             user_follows
+        where follow_id = id
+          and user_id = #{user_id}
+          and is_deleted = 0
+        limit #{pageNum},#{pageSize}
+    </select>
+    <select id="listFans" resultType="com.yk.dto.UserDTO">
+        select id, nickname, avatar_url
+        from user,
+             user_follows
+        where user_id = id
+          and follow_id = #{follow_id}
+          and is_deleted = 0
+        limit #{pageNum},#{pageSize}
+    </select>
+    <select id="listAllFollow" resultType="com.yk.dto.UserDTO">
+        select id, nickname, avatar_url
+        from user,
+             user_follows
+        where follow_id = id
+          and user_id = #{user_id}
+          and is_deleted = 0
+    </select>
+    <select id="listAllFans" resultType="com.yk.dto.UserDTO">
+        select id, nickname, avatar_url
+        from user,
+             user_follows
+        where user_id = id
+          and follow_id = #{follow_id}
+          and is_deleted = 0
+    </select>
+    <select id="listAllFriends" resultType="com.yk.dto.UserDTO">
+
+    </select>
+</mapper>

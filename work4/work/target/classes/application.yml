@@ -1,0 +1,49 @@
+server:
+  tomcat:
+    basedir: /temp
+  port: 80
+spring:
+  profiles:
+    active: application.yml
+  servlet:
+    multipart:
+      max-file-size: 1GB
+      max-request-size: 1GB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://49.235.136.113:36704/work4?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: mihouo
+    password: QqXAc5IBO2fSoqlIpgkc
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+
+
+
+  redis:
+    host: 49.235.136.113
+    port: 36705
+    password: ZvqmQenkXo5a9NQJ0sTW
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: assign_id #将id生成全局为雪花算法
+  mapper-locations: classpath*:/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+files:
+  upload:
+    path: /home/data/
+
