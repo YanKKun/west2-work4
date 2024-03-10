@@ -8,6 +8,10 @@ https://apifox.com/apidoc/shared-8d1e7569-af57-46ac-a60f-302e611bf127
 
 xiaohei   123456
 
+若测试用户接口功能可登录账号：
+
+xiaoming   1234567
+
 ## 技术栈：
 
 springboot，mysql，mybatis，mybatisplus，redis，docker，druid
